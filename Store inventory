@@ -1,0 +1,25 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, color TEXT, size TEXT, quantity INTEGER, price INTEGER);
+INSERT INTO store VALUES (1, "shirt", "red", "small", 3, "$10");
+INSERT INTO store VALUES (2, "shirt", "blue", "large", 5, "$7");
+INSERT INTO store VALUES (3, "pants", "denim", "medium", 12, "$25");
+SELECT * FROM store;
+INSERT INTO store VALUES (4, "pants", "khaki", "small", 8, "$12");
+INSERT INTO store VALUES (5, "socks", "white", "one-size", 9, "$3");
+INSERT INTO store VALUES (6, "shirt", "red", "medium", 5, "$10");
+INSERT INTO store VALUES (7, "shirt", "red", "large", 3, "$10");
+INSERT INTO store VALUES (8, "shirt", "blue", "small", 4, "$7");
+INSERT INTO store VALUES (9, "shirt", "blue", "medium", 9, "$7");
+INSERT INTO store VALUES (10, "pants", "denim", "small", 10, "$25");
+INSERT INTO store VALUES (11, "pants", "denim", "large", 15, "$25");
+INSERT INTO store VALUES (12, "pants", "khaki", "medium", 10, "$12");
+INSERT INTO store VALUES (13, "pants", "khaki", "large", 3, "$12");
+INSERT INTO store VALUES (14, "shirt", "green", "small", 3, "$10");
+INSERT INTO store VALUES (15, "shirt", "green", "large", 3, "$10");
+SELECT * FROM store WHERE (quantity) < 5 order BY color;
+SELECT * FROM store WHERE (price) > "$9" Order BY size;
+SELECT SUM (Quantity) FROM store;
+SELECT SUM (quantity) FROM store GROUP BY color;
+SELECT Color, SUM (quantity) FROM store GROUP BY COLOR;
+
+
+
